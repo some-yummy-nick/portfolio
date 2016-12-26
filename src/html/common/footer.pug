@@ -1,2 +1,10 @@
 footer.footer
+  .social
+    ul.social__list
+      - var items = {'в контакте':{'fa':'vk', 'link':'https://vk.com/yeffasol'}, 'github': {'fa':'github', 'link':'https://github.com/yeffasol'}}
+        each item, title in items
+          li.social__item
+            a(class="social__link  "+ "social__link--"+ item.fa  href= item.link target="_blank")
+              span= title
+              i(class="fa "+ "fa-"+ item.fa)
 

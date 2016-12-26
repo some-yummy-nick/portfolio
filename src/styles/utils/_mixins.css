@@ -1,0 +1,114 @@
+@define-mixin clearfix {
+  &::before,
+  &::after {
+    content: " ";
+    display: table;
+  }
+  &::after {
+    clear: both;
+  }
+}
+
+@define-mixin container {
+  width: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right:  auto;
+  margin-left: auto;
+  max-width: 1300px;
+  @media (--tablet-widths) {
+    padding-right: 0;
+    padding-left: 0;
+    width: 728px;
+  }
+  @media (--desktop-widths) {
+    width: 960px;
+  }
+}
+
+@define-mixin container-fluid {
+  width: auto;
+  @media (--tablet-widths) {
+    width: 84%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
+
+@define-mixin no-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@define-mixin no-decor {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+@define-mixin links ($link, $visited, $hover, $active) {
+  & {
+    color: $link;
+    &:visited {
+      color: $visited;
+    }
+    &:hover {
+      color: $hover;
+    }
+    &:active, &:focus {
+      color: $active;
+    }
+  }
+}
+@define-mixin inline-block $valign:middle {
+  display: inline-block;
+  vertical-align: $valign;
+}
+
+@define-mixin marginRight $margin-right {
+  margin-right: $margin-right;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+@define-mixin placecolor $color:#000000 {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &:-moz-placeholder {
+    color: $color;
+  }
+  &::-moz-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+}
+
+@define-mixin absolute-center {
+  display:block;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height:100%;
+  max-width:100%;
+}
+@define-mixin elementInvisible {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+@define-mixin elementVisible {
+  position: static !important;
+  height: auto;
+  width: auto;
+  overflow: visible;
+  clip: auto;
+}

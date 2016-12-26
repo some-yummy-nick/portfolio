@@ -1,0 +1,42 @@
+.portfolio{
+  &__items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  &__item{
+    position: relative;
+    width: 220px;
+    height: 280px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border: 1px solid #000;
+    &:hover{
+      .portfolio__hover{
+        background-color: color(var(--textColor) alpha(-20%));
+        top: 0;
+      }
+    }
+  }
+  &__hover{
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+    color: #fff;
+    text-align: center;
+    background-color: color(var(--textColor) alpha(100%));
+    transition: top 0.2s;
+  }
+  a{
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    &:hover{
+      color: var(--accentColor);
+
+    }
+  }
+}

@@ -1,6 +1,5 @@
 const gulp = require('gulp');
 const postcss = require('gulp-postcss');
-const posthtml = require('gulp-posthtml');
 const pug = require('gulp-pug');
 const sourcemaps = require('gulp-sourcemaps');
 const plumber = require('gulp-plumber');
@@ -28,7 +27,7 @@ const assets = [
 ];
 
 const processors = [
-  require('postcss-import')(),
+  require('precss')(),
   require('postcss-easysprites')({
     imagePath: './src/images/',
     spritePath: './src/images'
@@ -64,6 +63,7 @@ gulp.task('styles', () => {
 
 gulp.task('html', () => {
   return gulp.src('src/html/pages/*.pug')
+    .pipe(plumber())
     .pipe(pug({
       pretty: '  '
     }))
@@ -116,8 +116,7 @@ gulp.task('server', () => {
 
 gulp.task('watch', () => {
   gulp.watch('src/html/**/*.pug', ['html']);
-  gulp.watch('src/styles/**/*.css', ['style']);
-  gulp.watch('src/images/*.+(jpg|png)', ['images']);
+  gulp.watch('src/styles/**/*.css', ['styles']);
   gulp.watch(assets, ['copy']);
 });
 
