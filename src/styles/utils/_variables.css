@@ -1,8 +1,0 @@
-:root {
-  --font: 'Fira Sans', Arial, sans-serif;
-  --accentColor: #33c1e3;
-  --textColor: #414141;
-}
-@custom-media --mobile-widths-only (max-width: 767px);
-@custom-media --tablet-widths (min-width: 768px);
-@custom-media --desktop-widths (min-width: 1200px);
