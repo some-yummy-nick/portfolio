@@ -1,16 +1,18 @@
 .footer {
+  display: flex;
+  justify-content: center;
   background-color: #414141;
-  padding-top: 1px;
-  padding-bottom: 1px;
+
 }
 
 .social {
-  margin-left: auto;
-  margin-right: auto;
-  width: 150px;
-
+  padding-top: 10px;
+  padding-bottom: 10px;
   &__list {
-    @include noList;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
   }
   &__item {
 

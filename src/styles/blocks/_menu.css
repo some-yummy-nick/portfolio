@@ -5,7 +5,7 @@
     flex-wrap: wrap;
   }
   &__item {
-    @mixin marginRight 20px;
+    @mixin marginRight 5px;
     &:hover{
        i{
         color: var(--accentColor);
