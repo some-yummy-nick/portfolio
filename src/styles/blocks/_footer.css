@@ -34,9 +34,17 @@
         transform: translateX(-50%) translateY(-50%);
       color: var(--textColor);
     }
-    &:hover {
-      background-color: #5d99c3;
-    }
 
+      &--vk{
+        &:hover {
+          background-color: #5d99c3;
+        }
+
+      }
+      &--github{
+        &:hover {
+          background-color: #6ac4d9;
+        }
+      }
+    }
   }
-}
