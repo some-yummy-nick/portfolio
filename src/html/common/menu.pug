@@ -1,6 +1,6 @@
 nav.menu
   ul.menu__list
-    - var items = {'Обо мне':{'link':'about.html', 'class':'user','fa':'user-secret'}, 'Сертификаты':{'link':'certificate.html','class':'certificate','fa':'rocket'},'Портфолио':{'link':'index.html','class':'portfolio','fa':'briefcase'},'Связаться со мной':{'link':'get-in-touch','class':'get-in-touch','fa':'envelope'}}
+    - var items = {'Обо мне':{'link':'about.html', 'class':'user','fa':'user-secret'}, 'Сертификаты':{'link':'certificate.html','class':'certificate','fa':'rocket'},'Портфолио':{'link':'portfolio.html','class':'portfolio','fa':'briefcase'}}
       each item,title in items
         li(class= 'menu__item  ' + 'menu__item--'+item.class)
           i(class = 'fa '+ 'fa-'+ item.fa)
