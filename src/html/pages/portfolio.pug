@@ -1,7 +1,7 @@
 .portfolio
   h2.title Моё портфолио
   .portfolio__items
-    - var items = {'barbershop':{'description':'Интернет-магазин'}, 'fitnesstime':{'description':'Интернет-магазин'}, 'lambda':{'description':'Интернет-магазин'}, 'nerds':{'description':'Веб-студия'}, 'oneluke':{'description':'Интернет-магазин'}, 'pink':{'description':'Интернет-магазин'}, 'technomart':{'description':'Интернет-магазин'}, 'sedona':{'description':'Туристический город'}}
+    - var items = {'barbershop':{'description':'Интернет-магазин'}, 'fitnesstime':{'description':'Интернет-магазин'},'library':{'description':'Сайт издательства'}, 'lambda':{'description':'Интернет-магазин'}, 'nerds':{'description':'Веб-студия'}, 'oneluke':{'description':'Интернет-магазин'}, 'pink':{'description':'Интернет-магазин'}, 'technomart':{'description':'Интернет-магазин'}, 'sedona':{'description':'Туристический город'}}
     each item, title in items
       .portfolio__item
         img(src= "images/" + title + '.jpg' alt="portfolio__item" width="220")
