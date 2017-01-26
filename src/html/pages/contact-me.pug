@@ -1,0 +1,24 @@
+section.contact-me
+  .contact-me__form
+    form#contact-me__form(action="")
+      .contact-me__form-group
+        label.contact-me__form-label(for="name") Имя
+        input#name.contact-me__form-text(name="name", type="text", placeholder="Как к вам обращаться", qtip-position="left", qtip-content="Вы не ввели имя")
+
+      .contact-me__form-group
+        label.contact-me__form-label(for="email") Email
+
+        input#email.contact-me__form-text(name="email", type="text", placeholder="Куда мне писать", qtip-position="right", qtip-content="Вы не ввели email")
+
+      .contact-me__form-group.contact-me__form-group__message
+        label.contact-me__form-label(for="message") Сообщение
+
+        textarea#message.contact-me__form-message(name="message", cols="30", rows="10", placeholder="Кратко в чем суть", qtip-position="left", qtip-content="Вы не ввели cooбщение")
+
+      .contact-me__form-group
+        div(class="g-recaptcha contact-me__form-captcha" data-sitekey="6LershIUAAAAALZM4naq0AUkw_BGNDLzPxnWNCdT")
+      .contact-me__form-group
+        input.contact-me__form-submit(type="submit", value="Отправить")
+        input.contact-me__form-reset(type="reset", value="Очистить")
+
+
