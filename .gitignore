@@ -3,6 +3,7 @@ source/lib/bower/
 dest/
 .publish/
 .idea/
+.vscode
 *.log
 Thumbs.db
 .DS_Store
