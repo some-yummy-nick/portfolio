@@ -1,4 +1,4 @@
-http://yeffasol.github.io/portfolio/
+https://some-yummy-nick.github.io/portfolio/
 
 npm i для установки зависимостей
 
